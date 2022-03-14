@@ -2,3 +2,4 @@ master branch
 i learned how to merge the commits? of branches
 but there seems to be no main branch found in git bash
 hmm,,
+I'm gonna pull this one
