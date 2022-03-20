@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/newHeaderFooter.css">
+<link rel="stylesheet" href="../css/Main.css">
+<title>메인페이지</title>
+</head>
+<body>
+
+	<header>
+		<div id="customerCenter">
+			<ul class = "CC">
+				<li><a id="linkToCC" href="CS1.html">고객센터</a></li>
+			</ul>
+		</div>
+
+		<div id="logo">
+			<a href="Main.html"><img src="../image/logo2.png" alt="로고" style="width: 13.74em; height: 3em;"></a> <!-- 로고 주소는 일단 고친거임  -->
+		</div>
+
+		<div id="menuClass">
+			<ul class="menu">
+				<li id="menu_login"><a href="login.html">로그인</a></li>
+				<li id="justSlash">/</li>
+				<li id="menu_register"><a href="#">회원가입</a></li>
+				<li id="menu_search"><a href="Search.html">검색</a></li>
+				<li id="menu_mypage"><a href="mypage.html">마이페이지</a></li>
+			</ul>
+		</div>
+
+	</header>
+
+	<div class="advertisement">여기에 광고 및 전달사항 등을 공지합니다</div>
+
+
+	<div class="recommendations">
+		<p id="recText">추천 상품</p>
+		<table class="recTable">
+			<tr id="row1">
+				<th><a href="MerchDetail.html"><img class="recImg1" src="../image/grayBox.png"></a></th>
+				<th><a href="MerchDetail.html"><img class="recImg1" src="../image/grayBox.png"></a></th>
+				<th><a href="MerchDetail.html"><img class="recImg1" src="../image/grayBox.png"></a></th>
+				<th><a href="MerchDetail.html"><img class="recImg1" src="../image/grayBox.png"></a></th>
+			</tr>
+
+			<tr id="row2">
+				<th><a href="MerchDetail.html">
+						<p id="productName1">설명1</p>
+					</a>
+					<p id="productCost1">1,000,000원</p>
+				</th>
+				<th><a href="MerchDetail.html">
+						<p id="productName2">설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2
+							설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2</p>
+					</a>
+					<p id="productCost2">1,000,000원</p>
+				</th>
+				<th><a href="MerchDetail.html">
+						<p id="productName3">상품제목3</p>
+					</a>
+					<p id="productCost3">1,000,000원</p>
+				</th>
+				<th><a href="MerchDetail.html">
+						<p id="productName4">설명4</p>
+					</a>
+					<p id="productCost4">1,000,000원</p>
+				</th>
+			</tr>
+
+			<tr id="row3">
+				<th><a href="MerchDetail.html"><img class="recImg2" src="../image/grayBox.png"></a></th>
+				<th><a href="MerchDetail.html"><img class="recImg2" src="../image/grayBox.png"></a></th>
+				<th><a href="MerchDetail.html"><img class="recImg2" src="../image/grayBox.png"></a></th>
+				<th><a href="MerchDetail.html"><img class="recImg2" src="../image/grayBox.png"></a></th>
+			</tr>
+
+			<tr id="row4">
+						<th><a href="MerchDetail.html">
+						<p id="productName5">설명5</p>
+					</a>
+					<p id="productCost1">1,000,000원</p>
+				</th>
+				<th><a href="MerchDetail.html">
+						<p id="productName6">긴제목설명긴제목설명6긴제목설명6긴제목설명6긴제목설명66</p>
+					</a>
+					<p id="productCost2">1,000,000원</p>
+				</th>
+				<th><a href="MerchDetail.html">
+						<p id="productName7">설명7</p>
+					</a>
+					<p id="productCost3">1,000,000원</p>
+				</th>
+				<th><a href="MerchDetail.html">
+						<p id="productName8">설명8</p>
+					</a>
+					<p id="productCost4">1,000,000원</p>
+				</th>
+			</tr>
+		</table>
+		
+	<div id="productDetails1">
+    	<p>추천 상품</p>
+    </div>
+    
+
+	<script type="text/javascript">
+		var ri1 = document.getElementsByClassName("recImg1");
+		var ri2 = document.getElementsByClassName("recImg2");
+		var pd1 = document.getElementById("productDetails1");
+		//var pd2 = document.getElementById("productDetails2");
+		
+		for(i = 0; i < ri1.length; i++){
+			ri1[i].addEventListener("mouseover", cursorIn);
+			ri1[i].addEventListener("mousemove", cursorMove1);
+			ri1[i].addEventListener("mouseout", cursorOut);
+		}
+		
+		
+		for(i = 0; i < ri2.length; i++){
+			ri2[i].addEventListener("mouseover", cursorIn);
+			ri2[i].addEventListener("mousemove", cursorMove2);
+			ri2[i].addEventListener("mouseout", cursorOut);
+		}
+		
+		function cursorIn() {
+			pd1.style.visibility = 'visible';
+		}
+
+		function cursorOut() {
+			pd1.style.visibility = 'hidden';
+		}
+		
+		function cursorMove1() {
+			pd1.style.zIndex = 200; //임의의 아주 큰 수를 줘서 항상 위에 있게 한다
+			
+			document.onmousemove = function(e) { //e해야 좌표값이용 가능
+				pd1.style.left = e.clientX + 10 +"px";
+				pd1.style.top = 1162 + "px"; 
+				pd1.innerHTML = e.offsetY;
+			} 
+		}
+		
+		function cursorMove2() {
+			pd1.style.zIndex = 200; //임의의 아주 큰 수를 줘서 항상 위에 있게 한다
+			
+			document.onmousemove = function(e) { //e해야 좌표값이용 가능
+				pd1.style.left = e.clientX + 10 +"px";
+				pd1.style.top = 1700 + "px"; 
+				pd1.innerHTML = e.offsetY;
+			} 
+		}
+	
+	</script>
+
+<div class="pageMarkers">
+		<!--페이지 넘겨 기능  -->
+		<table id="pageTable">
+			<tr id="pageRow"> 
+				<td class= "markers outward1"><a href="#">《</a></td>
+				<td class= "markers inward1"><a href="#">〈</a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td class= "markers first"><a href="#">1</a></td>
+				<td class="markers second"><a href="#">2</a></td>
+				<td class= "markers third"><a href="#">3</a></td>
+				<td class="markers fourth"><a href="#">4</a></td> 
+				<!-- 지금은 예시이고 나중에는 수가 계속 변하게 해야함  -->
+				<td>&nbsp;&nbsp;</td>
+				<td class= "markers outward2"><a href="#">〉</a></td>
+				<td class= "markers inward2"><a href="#">》</a></td>
+			</tr>
+		</table>
+	</div> <!-- pageMArkers의 끝. -->
+
+	<!-- recommendations의 끝  -->
+	</div>
+
+
+<footer>
+	<div class=inner>
+		<p>
+		여기에 상세 회사 정보를 입력<br>
+		여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력<br>
+		여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력여기에 상세 회사 정보를 입력<br>
+		</p>
+	</div>
+</footer>
+
+</body>
+</html>
