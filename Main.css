@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+header{
+	height: 15em; /* 메인 한정 15em. 다른데선 전부 8em  */
+}
+
+#advertisement{
+/* 	background: pink;	 */
+	width: 1300px; height: 412px;
+	margin: 30px auto 0;
+}
+
+.arrows{
+/* 	background: skyblue; */
+	cursor: pointer;
+	width:50px; height: 100%;
+}
+
+.arrows>img{
+	width:50px; height: 150px;
+	position: relative;
+	top: 128px;
+	cursor: pointer;
+/* 	background: magenta; */
+}
+
+#arrowPrev{
+	float:left;
+}
+
+.slider {
+	position: relative;
+	width: 1200px;
+	height: 400px;
+	text-align: center;
+	border: 1px solid #a2a2a2;
+	margin: 6px auto;
+	cursor: pointer;
+	float: left;
+}
+
+#arrowNext{
+	float:left;
+}
+
+.advImages{
+	width:1198px;
+	height: 398px;
+}
+
+#advertisement:after{
+	clear: left;
+}
+
+
+.recommendations {
+	width: 76em;
+	text-align: center;
+	margin: 12px auto;
+}
+
+#recText { /* 추천상품이라고 써있음  */
+	margin-top: 12em;
+}
+
+.recTable { /* 추천상품을 보여주는 테이블*/
+	width: 100%; /* recommendations의 100퍼센트  */
+	height: 800px;
+	margin: 12px 0px;
+}
+
+.recTable th { /* 한 칸.  */
+	width: 24%; /* 한 칸이 전체의 24%차지  */
+} 
+
+th>a>img { /* th 전체 차지  */
+	height: 90%;
+	width: 90%;
+}
+
+#row1>th, /* 사진칸 */ 
+#row3>th {
+	height: 300px;
+}
+
+#row2>th{
+	border-bottom: 1px solid gray;
+	padding-bottom: 50px;
+}
+
+#row3>th{
+	padding-top: 80px;
+}
+#row2>th, /* 설명칸 */ 
+#row4>th {
+	height: 100px; /* 적용이 되는건가? 되는 거 맞음!*/
+	text-align: center;
+	font-size: 11pt;
+	font-weight: normal;
+}
+
+th>a>p { /* 설명칸의 제목이 너무 길면 흘러넘치는 걸 막아줌*/
+	width: 90%;
+	height: 24px;
+	overflow: hidden;
+	margin: 0px 15px;
+	/* color: black; */
+}
+
+th>a>p:hover {
+	text-decoration: underline; 
+}
+
+#productDetails1{ 
+	position: absolute; 
+	background:#fa5c27; 
+	width: 200px; height: 120px; 
+	opacity: 0.6; border-radius: 20%;
+	visibility: hidden;
+}
+
+.pageMarkers {
+	height: 50px;
+}
+
+.pageMarkers a{
+	text-decoration: none;
+}
+
+#pageTable{
+	margin: 40px auto 20px;
+	width: 25em;
+	text-align: center;
+}
+
+
+.markers a{
+	margin: 0;
+	padding: 2px 10px 4px;
+}
+
+.markers a:hover{
+	background: #fa5c27;
+	border-radius: 8px;
+}
+
+.markers a:link{
+	color: #363636;
+}
+
+.markers a:visited{
+	color: #363636;
+}
+
+#recText, th>a>p, .pageMarkers a{
+	color: #363636;
+}
