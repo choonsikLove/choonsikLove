@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+.wrap{
+	position: relative;
+	margin: 50px auto 0;
+	width: 82em; height: 813px;	
+	background: pink;
+}
+
+#navDiv{
+	float: left;
+	width: 30%; height: 100%;
+	background: cyan;
+}
+
+#profilePhotoDiv{ 
+	width: 15em; height: 280px;
+	margin-bottom: 15px;
+	background: #d5d5d5;
+}
+
+#profileImg{
+	width: 12em; height: 12em;
+	border-radius: 50%;
+	position: relative;
+	left: 1.6em; top: 2em;
+	background-color: white;
+}
+
+#profileP{
+	font-weight: bold;
+	font-size: 13pt;
+	margin: 45px auto;
+	text-align: center;
+}
+
+
+#myInfo{
+	width: 15em; height: 140px;
+	border:1px #a2a2a2 solid;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+#listDiv{
+	width: 15em;
+	text-align: center;
+}
+
+#listTable{
+	border-collapse: collapse;
+	border:1px #a2a2a2 solid;
+	border-radius: 5px;
+	border-style: hidden;
+	box-shadow: 0 0 0 1px #a2a2a2;
+	width: 15em; height: 100px;
+	margin-top: 20px;
+}
+
+
+#listTable tr td{
+	border:1px #a2a2a2 solid; 
+	padding: 3px 0;
+}
+
+a:link{
+	color: #363636;
+}
+
+a:visited{
+	color: #363636;
+}
+
+a:hover{
+	color: #363636;
+}
+
+
+#mainDiv{
+	float:right;
+	width:69.8%; height:100%;
+	position: relative;
+ 	background: violet; 
+}
+
+#titleDiv{
+	font-size: 20pt; 
+	font-weight: bold;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+#merchDiv{ 
+	width: 100%;
+	height: 743px; 
+	border: 1px #a2a2a2 solid;
+	border-radius: 10px;
+	background: aliceblue;
+}
+
+
+
+.wrap:after{
+	clear: both;
+}
+/* merch Div 내부 시작  */
+
+#merchTable{
+	height: 85%; width: 100%;
+	border-collapse: collapse;
+	border: none;
+}
+
+#firstRow, #secondRow, #thirdRow{
+	border-bottom: 1px #a2a2a2 solid;
+}
+
+
+
+.merch{
+	width: 100em; padding: 0; margin: 0;
+}
+
+#merch1, #merch3, #merch5, #merch7{
+	border-right: 1px #a2a2a2 solid;
+}
+
+.merchPhoto{
+	height: 120px; width: 140px;
+	margin: 1px 5px;
+	float: left;
+}
+
+
+
+.merchName{
+	font-size: 13pt;
+/* 	position: relative;
+	top: 7px; left: 20px; */
+	background: #D1B2FF;
+	overflow: hidden;
+}
+
+.merchPrice{
+	background: cyan;
+/* 	position: relative;
+	top: 27px; left: 0px;
+	float: left; */
+}
+
+.like{
+	float: right;
+	position: relative;
+	background-color: lightgreen;
+	color: white;
+	width: 110px; height: 30px; 
+	text-align: center;
+	font-weight: bold;
+	top: 20px;
+	font-size:15pt;
+}
+
+.merch:after{
+	clear:right;
+}
+
+.merchName, .like, .merchPhoto{
+	cursor: pointer;
+}
+
+.pageMarkers {
+	height: 30px;
+}
+
+.pageMarkers a{
+	text-decoration: none;
+}
+
+#pageTable{
+	margin: 40px auto 0px;
+	width: 25em;
+	text-align: center;
+}
+
+
+.markers a{
+	margin: 0;
+	padding: 2px 10px 4px;
+	color: #363636;
+}
+
+.markers a:hover{
+	background: #fa5c27;
+	border-radius: 8px;
+}
+
+.markers a:link{
+	color: #363636;
+}
+
+.markers a:visited{
+	color: #363636;
+}

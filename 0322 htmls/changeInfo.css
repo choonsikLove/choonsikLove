@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+#wrap{
+	width: 82em; 
+	height: 1150px;
+	margin: 7px auto;
+	position: relative;
+	color: #363636;
+	background: green;
+}
+
+#box1{
+	width: 63em; height: 60em;
+/* 	border: 1px solid gray; border-radius: 5px; */
+	font-size: 10pt; 
+	position: absolute;
+	top: 0px; left: 20em;
+	margin: 60px auto 0px;
+	background: black;
+}
+
+#box2{
+	width: 63em; height: 24em;
+/* 	border: 1px solid gray; border-radius: 5px; */
+	font-size: 10pt; 
+	position: absolute;
+	top: 800px; left: 20em;
+	margin: 0px auto;
+	background: blue;
+	
+}
+
+.row{
+	width: 100%;
+	/* height: 200px; *//* 임시 특졀한 값이 없는 친구들은
+	다 이걸로 통일.  */
+}
+
+.blockOdd{
+	float: left;
+	width:20%;
+	text-align: center;
+}
+
+.blockEven{
+	float:right;
+	width:79%;
+	text-align: center;
+	background: blueviolet;
+}
+
+#registerBox:after{
+	clear: both;
+}
+
+#row0,#row9{
+	height: 50px;
+	background: red;
+}
+
+
+#block1,#block17{
+	font-size: 20pt; font-weight: bold;
+	display: inline-block;
+	padding-top: 14px;
+}
+
+
+
+#row0+hr,
+#row9+hr{
+	background-color: #fa5c27;
+	height: 10px;
+	border:none;
+}
+
+
+
+
+#row1{
+	height: 50px;
+	margin-top: 20px;
+	background: orange;
+	/* row들 사양이 다 똑같지만
+	지금은 색상 때문에,,,아니
+	그러면,,,아 아`~아
+	에이 됐다
+	일단 따로 두고 나중에 합쳐잉 */
+}
+
+#block3{}
+
+.blockEven>form>input{
+	width: 38.5em;
+	padding: 2px 3px;
+	margin: 0;
+	height: 20px;
+	border: 1px #a2a2a2 solid;
+	font-family: 'Noto Sans KR';
+}
+
+#row2{
+	height: 50px;
+	margin-top: 20px;
+	background: yellow;
+}
+
+
+#row3{
+	height: 100px;
+	margin-top: 20px;
+	background: lightgreen;
+}
+
+#block8>form>input:first-child{
+	width: 20em;
+
+}
+
+#addressButton{
+	margin-right: 158px;
+	padding: 2px 4px;
+	font-family:'Noto Sans KR';
+	background: #fa5c27;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#block8>form>input,
+#block16>form>input{
+	margin-bottom: 3px;
+}
+
+
+#block7{}
+
+
+
+#block10{
+	text-align: left;
+}
+
+#row4{
+	height: 50px;
+	margin-top: 20px;
+	background: skyblue;
+}
+
+#phFirst{
+	width: 10em;
+	display: inline-block;
+	margin: 0;
+	margin-left: 70px;
+	padding: 2px 3px;
+	height: 25px;
+	border: 1px #a2a2a2 solid;
+	font-family: 'Noto Sans KR';
+	font-size: 9pt;
+	color: #363636;
+}
+
+#block10>form>input{
+	display: inline-block;
+	width: 10em;
+}
+
+
+#row5{
+	height: 50px;
+	margin-top: 20px;
+	background: lightblue;
+}
+
+#block12>form>input{
+	width: 150px;
+}
+
+
+#emails{
+	width: 200px;
+	display: inline-block;
+	margin: 0;
+	margin-right: 141px;
+	padding: 2px 3px;
+	height: 26.5px;
+	border: 1px #a2a2a2 solid;
+	font-family: 'Noto Sans KR';
+	font-size: 9pt;
+	color: #363636;
+}
+
+#row6{
+	height: 50px;
+	margin-top: 20px;
+	background: pink;
+}
+
+
+
+#row7{
+	height: 60px;
+	margin-top: 20px;
+	background: linen;
+}
+
+#banks{
+	width: 120px;
+	display: block;
+	margin-left: 71px;
+	padding: 2px 1px;
+	margin-bottom: 2px;
+	height: 26.5px;
+	border: 1px #a2a2a2 solid;
+	font-family: 'Noto Sans KR';
+	font-size: 9pt;
+	color: #363636;
+}
+
+option{
+	color: #363636;
+	/* 안 유효해 */
+}
+
+#row8,
+#row13{
+	height: 50px;
+	margin-top: 20px;
+	background: violet;
+}
+
+#row8>form>input,
+#row13>form>input{
+	padding: 2px 12px;
+	font-family: 'Noto Sans KR';
+	background: #fa5c27; color: white;
+	font-size: 12pt; font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	position: relative;
+	top: 10px; left: 29em;
+}
+/*아래부턴 box@ */
+
+#row10,#row11,#row12{
+	height: 50px;
+	margin-top:20px;
+	background: white;
+}
