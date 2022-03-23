@@ -84,7 +84,27 @@ a:hover{
 /* 	background: violet; */
 }
 
-#menuTable{
+.menuDiv{
+	display: flex;
+	flex-direction:row;
+	margin-left: 10px;
+}
+
+.menus{
+	width: 60px; height: 25px;
+	border: 1px #a2a2a2 solid;
+	background: aliceblue;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: pointer;
+}
+
+.clicked{
+	background: orange;
+}
+
+/* #menuTable{
 	width: 20%;
 	height: 40px;
 	text-align: center;
@@ -104,7 +124,7 @@ a:hover{
 	border-top-right-radius: 10px;
 	color: white;
 }
-
+ */
 
 #frameDiv{ 
 	width: 100%;

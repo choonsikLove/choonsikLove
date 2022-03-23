@@ -23,7 +23,7 @@
 			<ul class="menu">
 				<li id="menu_login"><a href="login.html">로그인</a></li>
 				<li id="justSlash">/</li>
-				<li id="menu_register"><a href="#">회원가입</a></li>
+				<li id="menu_register"><a href="MemberRegister.html">회원가입</a></li>
 				<li id="menu_search"><a href="Search.html">검색</a></li>
 				<li id="menu_mypage"><a href="mypage.html">마이페이지</a></li>
 			</ul>
@@ -79,7 +79,7 @@
 <div id="mainDiv">
 	<main>
 		<div class="menuDiv">
-			<script type="text/javascript">
+			<!-- <script type="text/javascript">
 			//아쉽지만,,,테이블은 탈락하였습니다
 			//div로 바꿀 거임
 				document.write("<table border='1' id='menuTable'>");
@@ -89,7 +89,10 @@
 				document.write("</tr>");
 				document.write("</table>");
 				
-			</script>
+			</script> -->
+			
+			<div class="menus" onclick='openPages(0)'>판매</div>
+			<div class="menus" onclick='openPages(1)'>구매</div>
 		</div>
 		
 		<!--클릭하면 색이 변하는 기능을 넣자!  -->
@@ -109,9 +112,38 @@
 					ifr.src = links[0];
 				}
 				
-				function openHs(num){
+				function openPages(num){
 					ifr.src = links[num];
 				}
+				
+				
+				var menus = document.getElementsByClassName('menus');
+				
+				//같은 걸 두번 클릭했을 때의 경우도 생각해야 함ㅠㅠ힝
+				function clicked() {
+					//여기서 this는 이벤트가 일어나는 객체를 말함. event.target
+					
+					if(this.classList[1]=="clicked"){
+						this.classList.remove("clicked");
+					} else {
+						for(let i = 0; i < menus.length; i++){
+							menus[i].classList.remove("clicked");
+						}
+						
+						this.classList.add("clicked");
+					}
+					
+				}
+		
+				function init() {
+					for(let i = 0; i < menus.length; i++){
+						menus[i].addEventListener("click",clicked);
+					}
+					menus[0].classList.add("clicked");//초기 설정
+				}
+			
+
+				init();
 			</script>
 		</div>
 	</main>	
