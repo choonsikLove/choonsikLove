@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+body {font-family:'Noto Sans KR';}
+li{list-style-type: none;}
+a[href] {text-decoration: none;}
+
+/* 일단 wrap도 헤더도 footer안의 inner도 전부 다 82em임!*/
+
+header {
+	width: 82em;
+	height: 8em;
+	margin: 7px auto;
+	position: relative;
+/* 	border-bottom: 1px black solid; */
+}
+
+.CC {
+	position: absolute;
+	left: 20px; top: 10px;
+	width: 4em;
+	height: 30px;
+	float: left;
+	text-align: center;
+	font-size: 10pt;
+}
+
+#customerCenter a {
+	color: #d5d5d5;
+}
+
+#logo {
+	position: absolute;
+	top: 0px; left: 33em;
+	margin: 50px auto;
+	float: left;
+}
+
+.menu{
+	position: absolute;
+	top: 10px; right: 20px;
+	float:right;
+} 
+
+.menu li {
+	float: left;
+	margin: 0px 5px;
+	font-size: 10pt;
+	
+}
+/*메뉴*/
+.menu>li>a:link {
+	color: #d5d5d5;
+}
+
+.menu>li>a:visited {
+	color: #d5d5d5;
+}
+
+.menu>li>a:hover {
+	color: black;
+}
+
+/* 고객센터  */
+#customerCenter a:link {
+	color: #d5d5d5;
+}
+
+#customerCenter a:visited {
+	color: #d5d5d5;
+}
+
+#customerCenter a:hover {
+	color: black;
+}
+
+header:after{
+	clear: both;
+}
+
+
+footer {
+	margin-top: 250px;
+	background: #e6e6e6;
+}
+
+.inner{
+	width: 82em; 
+	height: 100px;
+	margin: 0 auto;
+	background: #e6e6e6;
+	color: #363636;
+	font-size: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.inner>div>img{
+	width: 114px; height: 25px;
+}
+
+.inner>div>span{
+	font-weight: bold;
+}
+
