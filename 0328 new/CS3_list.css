@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+.wrap{
+	position: relative;
+	margin: 50px auto 0;
+	width: 82em; height: 813px;
+	color: #363636;
+}
+
+#navDiv{
+	float: left;
+	width: 30%; height: 100%;
+}
+
+#profilePhotoDiv{ 
+	width: 15em; height: 280px;
+	margin-bottom: 15px;
+	background: #d5d5d5;
+}
+
+#profileImg{
+	width: 12em; height: 12em;
+	border-radius: 50%;
+	position: relative;
+	left: 1.6em; top: 2em;
+	background-color: white;
+}
+
+#profileP{
+	font-weight: bold;
+	font-size: 13pt;
+	margin: 45px auto;
+	text-align: center;
+}
+
+
+#csList{
+	width: 15em; height: 141px;
+	text-align: center;
+}
+
+#csTable{
+	border-collapse: collapse;
+	border-collapse: collapse;
+	border:1px #a2a2a2 solid;
+	border-radius: 5px;
+	border-style: hidden;
+	box-shadow: 0 0 0 1px #a2a2a2;
+	width: 15em; height: 100px;
+	margin-top: 20px;
+}
+
+
+#csTable tr td{
+	border:1px #a2a2a2 solid; 
+}
+
+a:link{
+	color: #363636;
+}
+
+a:visited{
+	color: #363636;
+}
+
+a:hover{
+	color: #363636;
+}
+
+
+#csCenterDiv{
+	width: 15em; height: 100px;
+	text-align: center;
+	background: rgb(255, 132, 93);
+	position: relative;
+	top: -20px;
+}
+
+#csCenterP{
+	color: white;
+	font-size: 12pt;
+	padding-top: 13px;
+}
+
+
+#mainDiv{
+	float:right;
+	width:69.8%; height:100%;
+	position: relative;
+}
+
+main{
+	width: 90%;
+	margin: 0 auto;
+	height: 79%;
+}
+
+#topLine{
+	width: 100%;
+	height: 10%;
+}
+
+#topLine>hr{
+	border: 0;
+	height: 10px;
+	background: #fa5c27;
+}
+
+#topLine>p{
+	font-size: 20pt; font-weight: bold;
+	display: inline-block;
+	padding-top: 14px;
+}
+
+#searchDiv{
+	float: right;
+	margin-top: 20px;
+}
+
+
+#addButton{ 
+	background: #fa5c27;
+	cursor: pointer;
+	border: none;
+	width: 80px; height: 24px;
+	border-radius: 5px;
+	color: white;
+}
+
+#findButton>img{
+	padding-top: 1px;	
+}
+
+#topLine:after{
+	clear: right;
+}
+
+#board{
+	width: 100%;
+	height: 95%;
+	background: pink;
+}
+
+#line0{
+	background: aliceblue;
+}
+
+#lines{
+	width: 100%;
+	height: 580px;
+	background: teal;
+}
+
+.boardLine{
+	border-bottom: 1px #a2a2a2 solid;
+	background: yellow;
+}
+
+
+.boardNum{
+	display: inline-block;
+	padding: 2px 0;
+	width: 5%;
+	text-align: center;
+}
+
+.boardTitle{
+	display: inline-block;
+	width: 70%;
+	padding: 2px 0;
+	padding-left: 100px;
+	cursor: pointer;
+}
+
+.boardDate{
+	display: inline-block;
+	float: right;
+	width: 10%;
+	text-align: center;
+	padding: 2px 0;
+}
+
+#lines:after{
+	clear: right;
+}
+
+
+.pageMarkers {
+	height: 30px;
+}
+
+.pageMarkers a{
+	text-decoration: none;
+}
+
+#pageTable{
+	margin: 40px auto 0px;
+	width: 25em;
+	text-align: center;
+}
+
+
+.markers a{
+	margin: 0;
+	padding: 2px 10px 4px;
+	color: #363636;
+}
+
+.markers a:hover{
+	background: #fa5c27;
+	border-radius: 8px;
+}
+
+.markers a:link{
+	color: #363636;
+}
+
+.markers a:visited{
+	color: #363636;
+}

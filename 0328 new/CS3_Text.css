@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+.wrap{
+	position: relative;
+	margin: 50px auto 0;
+	width: 82em; height: 813px;
+	color: #363636;
+}
+
+#navDiv{
+	float: left;
+	width: 30%; height: 100%;
+}
+
+#profilePhotoDiv{ 
+	width: 15em; height: 280px;
+	margin-bottom: 15px;
+	background: #d5d5d5;
+}
+
+#profileImg{
+	width: 12em; height: 12em;
+	border-radius: 50%;
+	position: relative;
+	left: 1.6em; top: 2em;
+	background-color: white;
+}
+
+#profileP{
+	font-weight: bold;
+	font-size: 13pt;
+	margin: 45px auto;
+	text-align: center;
+}
+
+
+#csList{
+	width: 15em; height: 141px;
+	text-align: center;
+}
+
+#csTable{
+	border-collapse: collapse;
+	border-collapse: collapse;
+	border:1px #a2a2a2 solid;
+	border-radius: 5px;
+	border-style: hidden;
+	box-shadow: 0 0 0 1px #a2a2a2;
+	width: 15em; height: 100px;
+	margin-top: 20px;
+}
+
+
+#csTable tr td{
+	border:1px #a2a2a2 solid; 
+}
+
+a:link{
+	color: #363636;
+}
+
+a:visited{
+	color: #363636;
+}
+
+a:hover{
+	color: #363636;
+}
+
+
+#csCenterDiv{
+	width: 15em; height: 100px;
+	text-align: center;
+	background: rgb(255, 132, 93);
+	position: relative;
+	top: -20px;
+}
+
+#csCenterP{
+	color: white;
+	font-size: 12pt;
+	padding-top: 13px;
+}
+
+
+#mainDiv{
+	float:right;
+	width:69.8%; height:100%;
+	position: relative;
+	background: cyan;
+}
+
+main{
+	width: 90%;
+	margin: 0 auto;
+	height: 79%;
+}
+
+#topLine{
+	width: 100%;
+	height: 10%;
+}
+
+#topLine>hr{
+	border: 0;
+	height: 10px;
+	background: #fa5c27;
+}
+
+#topLine>p{
+	font-size: 20pt; font-weight: bold;
+	display: inline-block;
+	padding-top: 14px;
+}
+
+
+
+#board{
+	width: 100%;
+	height: 100%;
+	background: pink;
+	display: flex;
+	flex-direction: column;
+}
+
+#board_title{
+	background: white;
+	margin-top: 10px;
+	height: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+#board_text{
+	background: aliceblue;
+	font-size: 10pt;
+	padding: 5px 3px 0;
+	height: 280px;
+}
+
+#change{
+	text-align: right;
+	height: 20px;
+	margin-bottom: 3px;
+}
+
+#change>p>a{
+	font-size: 9pt;
+	color: #a9a9a9;
+	cursor:pointer;
+	
+}
+
+#answer{
+	background-color: linen;
+	height: 290px;
+	visibility: visible;
+	/* 나중을 위해 visibility*/
+	display: flex;	
+}
+
+#answer>img{
+	width:50px;
+	height: 80px;
+}
+
+#answer>div{
+	font-size: 10pt;
+	background: yellow;
+	height: 280px;
+	width: 92%;
+	padding: 5px 5px 0;
+}
+
+
+#below>a>span{
+	font-size: 9pt;
+	color: #a9a9a9;
+	cursor:pointer;
+}
+
+#below{
+	height: 25px;
+	background: orange;
+	display: flex;
+	justify-content: space-between;
+}
