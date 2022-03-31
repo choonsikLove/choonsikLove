@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery/jquery-3.6.0.js"></script>
+<link rel="stylesheet" type="text/css" href="review_popup.css">
+</head>
+<body>
+
+<button>후기 작성</button>
+
+<div id="popup" style="display:none">
+  <div class="popup_box">
+      <div id="x">
+     	 X
+      </div>
+
+
+      <div class="popup_cont">
+      	<div id="merchInfo">
+			<img src="../image/grayBox.png" alt="임시" style="height: 90px; width: 120px;">
+			<div>
+				<p>상품명</p>
+				<p>상품 가격</p>
+				<p>옵션(있으면)</p>
+			</div>
+		</div>
+		
+		<div id="merchReview_photo" class="merchReview">
+			<div id="addPhoto">
+				<form method="post" enctype="multipart/form-data"><!-- 인터넷에서 찾은 내용 -->
+					<input type="file"
+						id="image" name="image"
+						accept="image/*" style="visibility: hidden;"
+						onchange="loadFile(this)">
+					<input type="text" placeholder="파일 첨부" id = "fileName" readonly="readonly">
+					<div id="labelDiv">
+						<label for="image">
+							+
+						</label>
+					</div>
+				</form>
+			</div>
+			
+			<div id="photo"></div>
+			
+			<script type="text/javascript">
+	
+			//인터넷에서 찾은내용
+			function loadFile(input) {
+				var file = input.files[0];
+				var newImg = document.createElement('img');
+				var box = document.getElementById('photo');
+				var fileName = document.getElementById("fileName");
+				
+				fileName.value += file.name + ", "; //임시
+			
+				newImg.setAttribute("class","fileImg");
+				newImg.src = URL.createObjectURL(file);
+				newImg.style.width = "30px";
+				newImg.style.height = "30px";
+				newImg.style.objectFit = "contain";
+			
+			   	box.appendChild(newImg);
+				}
+		/* 	//작동 안함
+			newImg.onclick = function() {
+				box.removeChild(this);
+			} */
+			</script>
+		</div><!--id="merchReview_photo"   -->
+		
+		<div id="merchReview_text" class="merchReview">
+			<form>
+				<textarea rows="8" cols="70" maxlength="300" id="textArea" 
+				placeholder="후기를 남겨보세요"></textarea>
+				<br>
+				<button type="submit">확인</button>
+			</form>
+			<!--  onkeyup="count()" 글자수 카운트 기능-->
+		</div>
+			
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+function openPop() {
+    document.getElementById("popup").style.display = "block";
+
+}
+
+function closePop() {
+    document.getElementById("popup").style.display = "none";
+}
+
+$(function() {
+	$('button').click(openPop);
+	$('#x').click(closePop);/* 나중엔 끄는 거 말고 submit할 수 있게 합시당. */
+})
+</script>
+
+</body>
+</html>

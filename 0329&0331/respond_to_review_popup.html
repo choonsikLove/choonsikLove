@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery/jquery-3.6.0.js"></script>
+<link rel="stylesheet" type="text/css" href="respond_to_review_popup.css">
+</head>
+<body>
+
+<button>후기에 답변하는 버튼</button>
+
+<div id="popup" style="display:none;">
+  <div class="popup_box">
+      <div id="x">
+     	 X
+      </div>
+
+
+      <div class="popup_cont">
+      	<div id="review">
+			<img src="../image/grayBox.png" alt="임시" style="height: 80px; width: 110px;">
+			<div>
+				<div id="reviewer">
+					<img src="../image/m1.png" alt="프사" id="profilePhoto">
+					<p id="nickname">닉네임</p>
+				</div>
+				<div id="reviewText">
+					후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기
+					후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기
+					후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기후기
+				</div>
+			</div>
+		</div>
+		
+		<div id="response">
+			<form>
+				<textarea rows="8" cols="70" maxlength="300" id="textArea" 
+				placeholder="후기에 답장을 남겨보세요"></textarea>
+				<br>
+				<button type="submit">확인</button>
+			</form>
+			<!--  onkeyup="count()" 글자수 카운트 기능-->
+		</div>
+			
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+function openPop() {
+    document.getElementById("popup").style.display = "block";
+
+}
+
+function closePop() {
+    document.getElementById("popup").style.display = "none";
+}
+
+$(function() {
+	$('button').click(openPop);
+	$('#x').click(closePop);/* 나중엔 끄는 거 말고 submit할 수 있게 합시당. */
+})
+</script>
+
+</body>
+</html>

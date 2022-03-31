@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+#popup {
+	position:fixed;
+	top:0;left:0;
+	z-index: 10000; 
+	width: 100%; height: 100%; 
+	background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/*팝업 박스*/
+.popup_box{
+	position: relative;
+	top:50%;left:50%; 
+	height: 365px; width:40em;
+	transform:translate(-50%, -50%);
+	z-index:1002;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#x{
+	height: 20px; width: 10px; 
+	background: magenta;
+	position: absolute;
+	right: 1px;
+	cursor: pointer;
+}
+
+
+#textArea{
+	border: 1px #a2a2a2 solid;
+	resize: none;
+	padding: 3px;
+	font-family: 'Noto Sans KR';
+	width: 40em;
+	margin: 0 auto;
+}
+
+#reportDiv>form>button{
+	width: 60px; height: 24px;
+	background: #fa5c27;
+	color: white;
+	font-size: 9pt;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: 20em;
+	margin-top: 20px;
+}
+
+select{
+	border: 1px #a2a2a2 solid;
+	font-family: 'Noto Sans KR';
+	width: 100%;
+	margin: 0 auto;
+	height: 24px;
+	font-size: 9pt;
+}
+
+.popup_cont{
+	height: 98%;
+	background: red;
+}
+
+#merchInfo{
+	width: 100%;
+	height: 30%;
+	background: yellow;
+}
+
+p{
+	background: orange;
+	font-size: 10pt;
+}
+
+
+#reportDiv{
+	width: 100%;
+	height: 65%;
+	background: aliceblue;
+	margin-top: 8px;
+}
+

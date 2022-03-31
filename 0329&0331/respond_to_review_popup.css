@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+#popup {
+	position:fixed;
+	top:0;left:0;
+	z-index: 10000; 
+	width: 100%; height: 100%; 
+	background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/*팝업 박스*/
+.popup_box{
+	position: relative;
+	top:50%;left:50%; 
+	height: 360px; width:40em;
+	transform:translate(-50%, -50%);
+	z-index:1002;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#x{
+	height: 20px; width: 10px; 
+	background: magenta;
+	position: absolute;
+	right: 1px;
+	cursor: pointer;
+}
+
+
+#textArea{
+	border: 1px #a2a2a2 solid;
+	resize: none;
+	padding: 3px;
+	font-family: 'Noto Sans KR';
+	width: 40em;
+	margin: 0 auto;
+}
+
+#response>form>button{
+	width: 60px; height: 24px;
+	background: #fa5c27;
+	color: white;
+	font-size: 9pt;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: 20em;
+	margin-top: 10px;
+}
+
+.popup_cont{
+	height: 98%;
+	background: red;
+}
+
+#review{
+	width: 100%;
+	height: 25%;
+	background: yellow;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#review>div{
+	background: cyan;
+	width: 23em; height: 87px;
+}
+
+#profilePhoto{
+	border-radius: 50%;
+	width: 30px; height: 30px;
+	float: left;
+}
+
+#nickname{
+	font-size: 10pt;
+	position: relative;
+	top: -6px; left: 4px;
+	width: 200px;
+}
+
+#reviewer:after{
+	clear: left;
+}
+
+#reviewer{
+	background: pink;
+	height: 40%;
+}
+
+#review>div{
+	display: flex;
+	flex-direction: column;
+}
+
+#reviewText{
+	font-size: 9.5pt;
+	overflow: hidden;
+	width: 100%; height: 60%;
+	background: lime;
+}
+
+#response{
+	width: 100%;
+	height: 65%;
+	background: aliceblue;
+	margin-top: 30px;
+}
