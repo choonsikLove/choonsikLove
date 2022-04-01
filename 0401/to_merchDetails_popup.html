@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" type="text/css" href="to_merchDetails_popup.css">
+</head>
+<body>
+
+<button>문의에 답변하기</button>
+
+<div id="popup" style="display:block;">
+  <div class="popup_box">
+      <div id="x">
+     	 <img alt="X" src="../image/X.png"><!-- 왜 이렇게 색이 연하지? -->
+      </div>
+
+
+      <div class="popup_cont">
+      	<div id="inquiry">
+			<form>
+				<div id="user">
+					<img src="../image/cute.png" alt="프사" id="profilePhoto">
+					<p id="nickname">닉네임</p>
+				</div>
+				<div id="inquiry_text">
+					<p>
+					문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역
+					문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역
+					문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역문의 내역
+					</p>				
+				</div>
+			</form>
+		</div>
+		
+		<div id="reply">
+			<form>
+				<textarea rows="8" cols="70" maxlength="300" id="textArea" 
+				placeholder="문의에 답변하기"></textarea>
+				<br>
+				<button type="submit">확인</button>
+			</form>
+			<!--  onkeyup="count()" 글자수 카운트 기능-->
+		</div>
+			
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+function openPop() {
+    document.getElementById("popup").style.display = "block";
+
+}
+
+function closePop() {
+    document.getElementById("popup").style.display = "none";
+}
+
+$(function() {
+	$('button').eq(0).click(openPop);
+	$('#x').click(closePop);/* 나중엔 끄는 거 말고 submit할 수 있게 합시당. */
+})
+</script>
+
+</body>
+</html>
