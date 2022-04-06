@@ -1,0 +1,149 @@
+도서관에서 책을 빌려서 읽어 봅시다 편
+태그는 자바 코드를 html에 넣기 위한 코드일 뿐이다.
+
+많이 사용하는 건 소프트 웨어 재사용성을 위해.<< 내장객체가 있는 이유
+
+옛날버전 오라클을 쓰는 경우 드라이버가 없을 수도 있다.
+
+드라이버이름이 기억이 안나면 jar 파일 패키지 열어서 찾아봐야 함.
+oracle.jdbc.driver.OracleDriver
+
+오늘의 할일: VO객체에 데이터 담기 >>한 걸 ArrayList에 담아서 저장.
+
+1.DB연동하는 자바 빈즈 생성 - DAO.java
+Data Access Object
+vo value object 데이터가 들어가는 것
+사용자가 넣는 데이터나 db에서 넘어오는 데이터
+dto 도 그렇다 Data Transfer Object
+
+db연동하는 건 dao.
+Database Access Object
+
+재사용을 할 수 있게 만드는 게 중요. 
+
+oracle의 number는 int type으로 받는 게 좋고
+number,는 float나 double.
+varchar는 string.
+
+connection 과 statement는 import할 때 java.sql로 해야 함.
+
+
+DeptDAO에서 만든 결과물을 DeptVO로 전달하기 위해
+5번 단계를 별도의 메소드로 만들고, return을 해야 함.
+어떤 걸 메소드화 해야하는지 그런걸 생각해두면 좋와용
+
+DeptDAO에 로직을 넣는다 > 그리고 dao_test에서 객체 생성 후 실행 >
+근뎅 콘솔 창 말고 html 화면에 출력하고 싶음 > 그래서 DeptDAO에 method를 생성함. return type이 있음.
+>그 후 dao_test에 돌아와서 출력.
+
+
+데이터를 다른 느낌으로 출력하고 십어
+1)자바 파일을 바꾸기
+2)SQL을 바꾸기 << 2번으로 해야 한당. 추천
+데이터를 요청도 해야하는데 가공도 해야해서 톰캣이 힘들어진다 1번으로 하면.
+to_char을 이용하면 된다.
+
+
+------------------------------------------------------------------------------------------
+dept dao 와 emp dao의 공통점 : 1~3단계가 똑같아!
+매번 같은 코드를 만들어야한다 테이블이 늘어날 수록.
+아예 객체를 따로 분리하여 만들기. 필요한 dao객체에게 내거 써 하고 상속하게 함
+
+statement 종류가 3가지라고 함
+네????????????????????????????????????????????????
+
+부모의 생성자(DBConn)
+는 자식의 생성자(DeptDao, EmpDao)를 통해서 호출된다.
+부모 호출은 자동으로 일어남. 
+new DeptDAO()하면 부모부터 만든 다음에 자식을 만든다.
+(기본 생성자는 딱히 뭐 안하면 jvm이 자동으로 만들어준다)
+
+----------------------------------------------------------------------------------------------
+emp 테이블에 새로 정보를 넣을 때
+DAO 클래스에 메소드 형태로 들어간다.
+
+emp 테이블과 관련된 crud는 empDAO, dept 테이블과 관련된 crud는 deptDAO.
+
+재사용이 아주 중요함
+software 재사용성을 높이기 위해 再使用性
+
+
+
+2. Member Table 생성
+컬럼리스트: id(pk), name(not null), addr(null), hp(nn), mdate(nULL)가입일자
+중복 체크 기능을 넣어야 한다.
+유효성 체크: id, name, hp << nn 유효성 체크 필수
+mdate는 insert 될 때 내부에서 저장하도록. 사람이 입력하는 게 아니라
+
+create table 테이블명(컬럼명 데이터타입(길이) constraint제약조건(nn 같은 것), ...)
+
+VARCHAR 가변형
+VARCHAR2 << 2?
+
+HP 010 - 0000 - 0000일 때, COLUMN 3으로 나눠서 데이터를 받으면 된다.
+
+파란글자는 KEYWORD라서 가급적이면 바꿔주는 게 좋다.
+
+회원 가입부터 하고 로그인하는 게 좋음.
+
+MEMBER TABLE에서 회원가입 기능이랑 로그인 기능부터 만들 것이다.
+make beans that are going to connect with the member table
+>> CREATE MEMBER VO, MEMBER DAO JAVA FILES
+
+회원가입 만들기
+MemberDAO
+-insert 작업
+-insert 작업, update, delet는 int 값으로 나온다.
+
+>>jsp file calls memberDAO.
+
+
+-------------------------------------------------------------------------------
+ADDING A PASSWORD COLUMN>> 
+there once was a column word after the word add but now it is only for the older version oracle.
+
+you need to commit after making an update to the tables(because of phantom data)
+
+
+AFTER ADDING A NEW COLUMN TO THE TABLE,,,
+it becomes imposssible for you to use the form that you made earlier(because of the difference btw the number of
+columns from the table and the number of values from the memberVO java)
+please check the top of the error message. >> not enough values
+
+first)in the form.jsp page>> add a label and input for the new column (and also add the validation check function 
+if needed)
+2) add PASS filed in the memberVO.java
+3) and add the value for the pass column in the sql string.
+you do not need to change anything in the process page.jsp
+
+----------------------------------------------------------------------------------------------------
+java.sql.PreparedStatement
+
+Statement >> prepared statement >>callable statement
+	          most used		rarely barely used(almost never used)
+
+unlike the others,
+when using executeQuery(), executeUpdate() method,
+there are no sql in ().
+
+But when making a taxi(statement) by using Connection object,
+you need to put sql String as a parameter.
+(make it in DBConn.java file)
+please check the java se api 8 page. (PreparedStatement and Connection page)
+
+original statement and the prepared statements are same in that 
+both of them are inherently taxies, but differ in types(just like uber and
+normal taxi)
+
+in order to use prepared statements...
+check the api page
+add new void in the DBConn to make preparedStatements
+
+and then make new sql String that involves ?.. what is this thing called?
+and call the void that we made earlier in the DBConn.java
+put the sql String in that void
+
+and set the exact data type to the prepared statement object using .setString method
+.setString(index number, voObject.get the fields)
+
+and the rest is same
