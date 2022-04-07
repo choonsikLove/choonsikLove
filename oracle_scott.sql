@@ -51,3 +51,55 @@ UPDATE MEMBER SET PASS = '1234'; --"" 쓰지 마라,,,,힝
 --SQL TOOL에서 업데이트를 하면 메모리에만 올라가기 때문에 PHANTOM DATA라고 부른다고 합니다 그래서,,
 COMMIT;
 --을 해야한다.
+
+--0407
+--로그인
+select count(*) from member where mid='test' and pass='1234';
+--값이 있으면 1이 나오고 없으면 count 값이 0이 나옴.
+
+--이렇게 하면 자바에 이 값을 가져가서 비교하고 하는 1번 작업을 해야 한다.
+select mid,pass from member where mid='test' and pass='1234';
+
+--CGV 회원가입 CGV_MEMBER
+--FORM과 테이블 맞추기(나머지 하나는 뭐지?)
+CREATE TABLE CGV_MEMBER(
+    ID      VARCHAR2(50) PRIMARY KEY,
+    PASS    VARCHAR2(50) NOT NULL,
+    NAME    VARCHAR2(50) NOT NULL,
+    GENDER  VARCHAR2(10) NOT NULL,
+    EMAIL   VARCHAR2(50) NOT NULL,
+    HP      VARCHAR2(20) NOT NULL,
+    HOBBYLIST VARCHAR2(50) NOT NULL,
+    INTRO VARCHAR2(100),
+    MDATE   DATE
+);
+
+SELECT * FROM USER_TABLES WHERE TABLE_NAME='CGV_MEMBER'; --꼭 확인해봅시다! 테이블이름은 꼭 대문자.
+DESC CGV_MEMBER;
+
+SELECT * FROM CGV_MEMBER;
+
+DELETE FROM CGV_MEMBER WHERE ID='mugcup';
+
+--cgv_board 테이블 생성
+--PK B_1 이런 식으로
+CREATE TABLE CGV_BOARD(
+    BID     VARCHAR2(10) PRIMARY KEY,    
+    BTITLE   VARCHAR2(100) NOT NULL,
+    BCONTENT    VARCHAR2(200),
+    BHITS   NUMBER(4),
+    BDATE   DATE
+);
+
+SELECT * FROM USER_TABLES WHERE TABLE_NAME = 'CGV_BOARD';
+DESC CGV_BOARD;
+
+SELECT * FROM CGV_BOARD;
+
+--BID COLUMN에 들어가는 SEQUENCE 생성(자동 번호 생성기)
+CREATE SEQUENCE SEQU_CGV_BOARD_BID
+    START WITH 1
+    INCREMENT BY 1;
+
+--SEQUENCE 잘 만들어졌는지 확인해보기
+SELECT * FROM user_sequences;
