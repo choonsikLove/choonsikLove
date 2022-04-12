@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	
+	//이 홍길동을 브라우저에 출력하고 싶어!
+	$(document).ready(function() {
+		var person = {name:"홍길동", age: 20, "addr": 'seoul'}; //""없어도 ㄱㅊ. value값을 더 중시합시다.
+		//alert(person.name);//person은 그냥 object예요
+		/*
+		$('#output').html("<li>"+person.name+"</li>");
+		$('#output').html("<li>"+person.age+"</li>"); 
+		*/
+		//이렇게 하면 순차적으로 나오는 게 아니라 person.age만 나오게 됨.
+		//대신 append를 씁시다
+		
+		/*
+		$('#output').append("<li>"+person.name+"</li>");
+		$('#output').append("<li>"+person.age+"</li>");
+		$('#output').append("<li>"+person.addr+"</li>");
+		*/
+		
+		//테이블 형식으로 person 데이터 출력
+		var output = "<table border=1>"; //편하게 하기 위해 태그 들어가는 변수 만들기
+		output += "<tr>";
+		output += "<td>Name</td><td>Age</td><td>Addr</td>";
+		output += "</tr>";
+		//사람이 늘어나면 for문을 통해 계속계속 이 부분을 돌리면 된다.
+		output += "<tr>";
+		output += "<td>"+person.name+"</td><td>"+person.age+"</td><td>"+person.addr+"</td>";
+		output += "</tr>";
+		output += "</table>";
+		
+		$("h1").after(output); //h1 뒤에 찍겠다는 얘기
+		
+		//h1태그 없이 body안에 직고 싶으면 body.after가 아니라~ body.append
+		
+	});
+	
+</script>
+</head>
+<body>
+	<h1>JSON 테스트</h1>
+	
+</body>
+</html>

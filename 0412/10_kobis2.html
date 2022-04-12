@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="http://localhost:9000/myweb/js/myweb.js"></script>
+<!-- script 순서 바꾸면 안됨. -->
+<style type="text/css">
+	table{
+		text-align: center;
+		background: linen;
+	}
+</style>
+</head>
+<body>
+
+	<h1>Kobis OPEN API - $.getJSON(url,function(data){});</h1>
+	<select id="choice">
+		<option value="day">일별
+		<option value="week">주별
+	</select>
+	<input type="text" id="date" placeholder="연월일 공백 없이 입력 ">
+	<button type="button" id="search">조회</button>
+	
+</body>
+</html>
