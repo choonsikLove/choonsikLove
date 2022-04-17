@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/newHeaderFooter.css">
 <link rel="stylesheet" href="../css/CS3_list.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>고객센터</title>
 </head>
 <body>
@@ -136,6 +137,12 @@
 				ps[0].setAttribute('class','boardNum');
 				ps[1].setAttribute('class','boardTitle');
 				ps[2].setAttribute('class','boardDate');
+				
+				$('document').ready(function(){
+					$('.boardTitle').click(function(){
+						location.href = "CS3_Text.jsp";
+					});
+				});
 				
 				lines.prepend(boardLine);
 				

@@ -44,7 +44,7 @@
 	<div id="popup" style="display:none;">
   <div class="popup_box">
       <div id="x">
-     	 <img alt="X" src="../image/X.png">
+     	 <img alt="X" src="../image/X.png" height= "20px" width= "10px">
       </div>
 
 

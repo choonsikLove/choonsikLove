@@ -61,7 +61,7 @@
 
 		<tr id="row2">
 			<th><a href="changeInfo.jsp">
-					<p>나의 정보 관리</p>
+					<p>나의 정보 변경</p>
 				</a>
 			</th>
 			<th><a href="history.jsp">

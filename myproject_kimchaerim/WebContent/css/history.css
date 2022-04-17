@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+.wrap{
+	position: relative;
+	margin: 50px auto 0;
+	width: 82em; height: 813px;	
+	background: pink;
+}
+
+#navDiv{
+	float: left;
+	width: 30%; height: 100%;
+	background: cyan;
+}
+
+#profilePhotoDiv{ 
+	width: 15em; height: 280px;
+	margin-bottom: 15px;
+	background: #d5d5d5;
+}
+
+#profileImg{
+	width: 12em; height: 12em;
+	border-radius: 50%;
+	position: relative;
+	left: 1.6em; top: 2em;
+	background-color: white;
+}
+
+#profileP{
+	font-weight: bold;
+	font-size: 13pt;
+	margin: 45px auto;
+	text-align: center;
+}
+
+
+#myInfo{
+	width: 15em; height: 140px;
+	border:1px #a2a2a2 solid;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+#listDiv{
+	width: 15em;
+	text-align: center;
+}
+
+#listTable{
+	border-collapse: collapse;
+	border:1px #a2a2a2 solid;
+	border-radius: 5px;
+	border-style: hidden;
+	box-shadow: 0 0 0 1px #a2a2a2;
+	width: 15em; height: 100px;
+	margin-top: 20px;
+}
+
+
+#listTable tr td{
+	border:1px #a2a2a2 solid; 
+	padding: 3px 0;
+}
+
+a:link{
+	color: #363636;
+}
+
+a:visited{
+	color: #363636;
+}
+
+a:hover{
+	color: #363636;
+}
+
+
+#mainDiv{
+	float:right;
+	width:69.8%; height:100%;
+	position: relative;
+/* 	background: violet; */
+}
+
+.menuDiv{
+	display: flex;
+	flex-direction:row;
+	margin-left: 10px;
+}
+
+.menus{
+	width: 60px; height: 25px;
+	border: 1px #a2a2a2 solid;
+	background: aliceblue;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: pointer;
+}
+
+.clicked{
+	background: orange;
+}
+
+/* #menuTable{
+	width: 20%;
+	height: 40px;
+	text-align: center;
+	border-collapse: collapse;
+	border-style: hidden;
+	font-size: 10pt;
+	margin-left: 7px;
+}
+
+
+.menus{
+	width: 10em;
+	cursor: pointer;
+	border-style: hidden;
+	background: #fa5c27;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color: white;
+}
+ */
+
+#frameDiv{ 
+	width: 100%;
+	height: 743px; 
+	border: 1px #a2a2a2 solid;
+	border-radius: 10px;
+}
+
+#innerFrame{
+	width: 90%;
+	height: 730px;
+	border: none;
+	margin: 13px auto;
+	position: absolute;
+	left: 4em;
+	overflow-y: hidden;
+}
+
+.wrap:after{
+	clear: both;
+}
